@@ -158,7 +158,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ya tengo cuenta"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToLogin" id="mCP-No-BRI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToLogin" id="tI4-KL-sbg"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fecha de nacimiento dd/mm/aaa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3V-AS-S46">
