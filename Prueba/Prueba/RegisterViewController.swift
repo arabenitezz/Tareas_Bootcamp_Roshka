@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func goToLogin(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToLogin", sender: self)
+        dismiss(animated: true)
     }
 }
 
