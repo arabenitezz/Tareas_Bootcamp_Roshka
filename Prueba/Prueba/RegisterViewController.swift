@@ -1,10 +1,3 @@
-//
-//  RegisterViewController.swift
-//  Prueba
-//
-//  Created by Bootcamp on 2/24/25.
-//
-
 import UIKit
 
 class RegisterViewController: UIViewController {
@@ -28,5 +21,47 @@ class RegisterViewController: UIViewController {
     @IBAction func goToLogin(_ sender: UIButton) {
         dismiss(animated: true)
     }
-}
+    
+        @IBAction func createAccount(_ sender: UIButton) {
+            guard let email = RegisterEmailTextField.text, !email.isEmpty,
+                  let password = RegisterPasswordTextField.text, !password.isEmpty,
+                  let repeatPassword = RegisterRepeatPasswordTextField.text, !repeatPassword.isEmpty else {
+                showAlert(message: "Todos los campos son obligatorios.")
+                return
+            }
+
+            if password != repeatPassword {
+                showAlert(message: "Las contraseñas no coinciden.")
+                return
+            }
+
+            var users = UserDefaults.standard.dictionary(forKey: "users") as? [String: String] ?? [:]
+
+            
+            if users[email] != nil {
+                showAlert(message: "El usuario ya está registrado.")
+                return
+            }
+
+            users[email] = password
+            UserDefaults.standard.setValue(users, forKey: "users")
+
+            showAlert(message: "Usuario registrado con éxito. Ahora puedes iniciar sesión.") {
+                self.dismiss(animated: true)
+            }
+            print(users)
+        }
+
+        func showAlert(message: String, completion: (() -> Void)? = nil) {
+            let alert = UIAlertController(title: "Registro", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+                completion?()
+            })
+            present(alert, animated: true)
+        
+        }
+    
+
+
+    }
 
