@@ -46,7 +46,8 @@ class GameViewController: UIViewController {
             timerConnector = Timer.publish(every: 1.0, on: .main, in: .common)
                 .autoconnect()
                 .sink{ [weak self] currentDate in
-                    guard let self, let endDate else { return }
+                    guard let self = self, let endDate = self.endDate else { return }
+
                     
                     let remaining = endDate.timeIntervalSince(currentDate)
                     if remaining > 0 {
@@ -80,10 +81,30 @@ class GameViewController: UIViewController {
         }
     }
     
+    private func saveScore() {
+        let defaults = UserDefaults.standard
+        var leaderboard = defaults.dictionary(forKey: "leaderboard") as? [String: Int] ?? [:]
+        
+        let username = UserDefaults.standard.string(forKey: "currentUser") ?? "Jugador"
+        
+        leaderboard[username] = max(score, leaderboard[username] ?? 0)
+        
+        let sortedLeaderboard = leaderboard.sorted { $0.value > $1.value }.prefix(5)
+        let top5: [String: Int] = Dictionary(uniqueKeysWithValues: sortedLeaderboard.map { ($0.key, $0.value) })
+
+        
+        defaults.set(top5, forKey: "leaderboard")
+        defaults.synchronize()
+        
+    }
+    
     private func endGame() {
         timerConnector?.cancel()
         timerLabel.text = "0"
         ballButton.isHidden = true
+        
+        saveScore()
+        
         let alert = UIAlertController(title: "Juego terminado", message: "Puntaje final \(score)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)

@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
 
 
         if let storedPassword = users[email], storedPassword == password {
+            UserDefaults.standard.set(email, forKey: "currentUser")
             performSegue(withIdentifier: "goToHomeSegue", sender: self)
         } else {
             showAlert(message: "Correo o contraseña incorrectos.")

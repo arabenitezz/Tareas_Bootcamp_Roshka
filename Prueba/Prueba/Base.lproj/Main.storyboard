@@ -224,12 +224,12 @@
         <scene sceneID="Jc2-V4-YXS">
             <objects>
                 <viewController id="kL5-hA-zve" customClass="HomeViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DhQ-f2-Ufo" customClass="Home">
+                    <view key="view" contentMode="scaleToFill" id="DhQ-f2-Ufo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-77-BaQ">
-                                <rect key="frame" x="175" y="250" width="37" height="21"/>
+                                <rect key="frame" x="124" y="222" width="132" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -245,7 +245,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-na-RRB">
-                                <rect key="frame" x="169" y="117" width="43" height="21"/>
+                                <rect key="frame" x="136" y="119" width="142" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhx-qk-jLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4518.320610687023" y="2.1126760563380285"/>
+            <point key="canvasLocation" x="4515.9420289855079" y="2.0089285714285712"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="Emy-GJ-MHO">
