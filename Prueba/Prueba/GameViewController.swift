@@ -43,7 +43,6 @@ class GameViewController: UIViewController {
                     } else {
                         self.timerConnector?.cancel()
                         self.timerLabel.text = "0"
-                        print("⏳ Timer Finished")
                     }
                 }
         }
