@@ -16,9 +16,8 @@ class HomeViewController: UIViewController {
         
     }
     
-    @IBAction func goToLogin(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToLogin", sender: self)
-    }
-
+    @IBAction func goToGame(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToGameSegue", sender: self)
+      }
 
 }
