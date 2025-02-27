@@ -27,7 +27,18 @@ class GameViewController: UIViewController {
             timerLabel.text = "30"
             scoreLabel.text = "Puntaje: 0"
             ballButton.isHidden = true
-            userLabel.text = UserDefaults.standard.string(forKey: "currentUser")
+            // Obtener el email del usuario actual
+            let userEmail = UserDefaults.standard.string(forKey: "currentUser") ?? "Jugador"
+                    
+            // Buscar el nombre de usuario correspondiente al email
+            let usersData = UserDefaults.standard.dictionary(forKey: "usersData") as? [String: [String: Any]] ?? [:]
+                    
+            // Si encontramos datos del usuario, usamos su nombre de usuario
+            if let userData = usersData[userEmail], let username = userData["username"] as? String {
+                        userLabel.text = username
+                    } else {
+                        userLabel.text = userEmail
+                    }
         }
 
         @IBAction func startTimerButtonTapped(_ sender: UIButton) {
