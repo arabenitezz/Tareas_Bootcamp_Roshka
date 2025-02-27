@@ -12,6 +12,7 @@ import Foundation
 class GameViewController: UIViewController {
 
 
+        @IBOutlet weak var userLabel: UILabel!
         @IBOutlet weak var timerLabel: UILabel!
         @IBOutlet weak var scoreLabel: UILabel!
         @IBOutlet weak var gameContainer: UIView!
@@ -26,6 +27,7 @@ class GameViewController: UIViewController {
             timerLabel.text = "30"
             scoreLabel.text = "Puntaje: 0"
             ballButton.isHidden = true
+            userLabel.text = UserDefaults.standard.string(forKey: "currentUser")
         }
 
         @IBAction func startTimerButtonTapped(_ sender: UIButton) {

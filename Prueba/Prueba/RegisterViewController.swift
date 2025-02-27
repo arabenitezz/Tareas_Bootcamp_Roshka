@@ -3,7 +3,6 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var RegisterTitleTextLabel: UILabel!
-    @IBOutlet weak var RegisterNameTextField: UITextField!
     @IBOutlet weak var RegisterUsernameTextField: UITextField!
     @IBOutlet weak var RegisterEmailTextField: UITextField!
     @IBOutlet weak var RegisterPasswordTextField: UITextField!
@@ -23,8 +22,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
-        guard let name = RegisterNameTextField.text, !name.isEmpty,
-              let username = RegisterUsernameTextField.text, !username.isEmpty,
+        guard let username = RegisterUsernameTextField.text, !username.isEmpty,
               let email = RegisterEmailTextField.text, !email.isEmpty,
               let password = RegisterPasswordTextField.text, !password.isEmpty,
               let repeatPassword = RegisterRepeatPasswordTextField.text, !repeatPassword.isEmpty else {
@@ -63,7 +61,6 @@ class RegisterViewController: UIViewController {
         
         // guardar todos los datos del usuario
         let userData: [String: Any] = [
-            "name": name,
             "username": username,
             "email": email,
             "password": password

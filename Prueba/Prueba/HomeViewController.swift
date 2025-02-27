@@ -26,7 +26,21 @@ class HomeViewController: UIViewController {
         
         var leaderboardText = ""
         for (index, entry) in sortedLeaderboard.prefix(5).enumerated() {
-            leaderboardText += "\(index + 1). \(entry.key): \(entry.value) puntos \n"
+            // Obtener el email del usuario
+            let userEmail = entry.key
+            
+            // Buscar el nombre de usuario correspondiente al email
+            let usersData = UserDefaults.standard.dictionary(forKey: "usersData") as? [String: [String: Any]] ?? [:]
+            
+            // Nombre de usuario por defecto (en caso de no encontrarlo)
+            var displayName = userEmail
+            
+            // Si encontramos datos del usuario, usamos su nombre de usuario
+            if let userData = usersData[userEmail], let username = userData["username"] as? String {
+                displayName = username
+            }
+            
+            leaderboardText += "\(index + 1). \(displayName): \(entry.value) puntos \n"
         }
         
         if leaderboardText.isEmpty {
@@ -34,11 +48,9 @@ class HomeViewController: UIViewController {
         }
         
         LeaderboardListOfUsersLabel.text = leaderboardText
-    
     }
     
     @IBAction func goToGame(_ sender: UIButton) {
         performSegue(withIdentifier: "goToGameSegue", sender: self)
-      }
-
+    }
 }
