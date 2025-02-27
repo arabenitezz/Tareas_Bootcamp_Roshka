@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
         }
         
         LeaderboardListOfUsersLabel.text = leaderboardText
-        print(leaderboardText)
+    
     }
     
     @IBAction func goToGame(_ sender: UIButton) {

@@ -16,10 +16,7 @@ class LoginViewController: UIViewController {
         
         hideKeyboardWhenTappedAround()
 
-        view.backgroundColor = UIColor(red: 248/255, green: 251/255, blue: 255/255, alpha: 1.0)
-
         // desabilitar login al inicio
-        
         LoginButton.isEnabled = false
 
         // detectar cambios en los textfields
@@ -27,40 +24,65 @@ class LoginViewController: UIViewController {
         LoginPasswordTextField.addTarget(self, action: #selector(verificarCampos), for: .editingChanged)
     }
 
-    // veriifcar q los campos no esten vacios
+    // verificar q los campos no esten vacios
     @objc func verificarCampos() {
         let usuario = LoginUserNameTextField.text ?? ""
         let contraseña = LoginPasswordTextField.text ?? ""
         LoginButton.isEnabled = !usuario.isEmpty && !contraseña.isEmpty
     }
 
-
     @IBAction func iniciarSesion(_ sender: UIButton) {
-        guard let email = LoginUserNameTextField.text, !email.isEmpty,
+        guard let emailOrUsername = LoginUserNameTextField.text, !emailOrUsername.isEmpty,
               let password = LoginPasswordTextField.text, !password.isEmpty else {
             showAlert(message: "Todos los campos son obligatorios.")
             return
         }
 
-
-        let users = UserDefaults.standard.dictionary(forKey: "users") as? [String: String] ?? [:]
-
-
-        if let storedPassword = users[email], storedPassword == password {
-            UserDefaults.standard.set(email, forKey: "currentUser")
+        // Obtener todos los usuarios
+        let usersDict = UserDefaults.standard.dictionary(forKey: "usersData") as? [String: [String: Any]] ?? [:]
+        
+        var userFound = false
+        var userEmail = ""
+        
+        // Verificar si el texto introducido es un email o un nombre de usuario
+        let isEmail = emailOrUsername.contains("@")
+        
+        if isEmail {
+            // Si es un email, buscar directamente
+            if let userData = usersDict[emailOrUsername],
+               let storedPassword = userData["password"] as? String,
+               storedPassword == password {
+                userFound = true
+                userEmail = emailOrUsername
+            }
+        } else {
+            // Si es un nombre de usuario, buscar en todos los usuarios
+            for (email, userData) in usersDict {
+                if let username = userData["username"] as? String,
+                   username == emailOrUsername,
+                   let storedPassword = userData["password"] as? String,
+                   storedPassword == password {
+                    userFound = true
+                    userEmail = email
+                    break
+                }
+            }
+        }
+        
+        if userFound {
+            // Guardar el email del usuario actual para identificarlo en la aplicación
+            UserDefaults.standard.set(userEmail, forKey: "currentUser")
             performSegue(withIdentifier: "goToHomeSegue", sender: self)
         } else {
-            showAlert(message: "Correo o contraseña incorrectos.")
+            showAlert(message: "Usuario o contraseña incorrectos.")
         }
     }
-
 
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Inicio de Sesión", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-
 
     @IBAction func goToRegister(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRegisterSegue", sender: self)

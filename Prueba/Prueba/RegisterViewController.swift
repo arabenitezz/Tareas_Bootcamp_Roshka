@@ -16,7 +16,6 @@ class RegisterViewController: UIViewController {
         
         hideKeyboardWhenTappedAround()
         
-        view.backgroundColor = UIColor(red: 248/255, green: 251/255, blue: 255/255, alpha: 1.0)
     }
 
     @IBAction func goToLogin(_ sender: UIButton) {
@@ -33,28 +32,28 @@ class RegisterViewController: UIViewController {
             return
         }
 
-        // Validar que las contraseñas coincidan
+        // validar que las contraseñas coincidan
         if password != repeatPassword {
             showAlert(message: "Las contraseñas no coinciden.")
             return
         }
         
-        // Validar formato de correo electrónico
+        // validar formato de correo electrónico
         if !isValidEmail(email) {
             showAlert(message: "El formato del correo electrónico no es válido.")
             return
         }
 
-        // Obtener usuarios existentes
+        // obtener usuarios existentes
         var usersDict = UserDefaults.standard.dictionary(forKey: "usersData") as? [String: [String: Any]] ?? [:]
         
-        // Verificar si el correo ya está registrado
+        // verificar si el correo ya está registrado
         if usersDict[email] != nil {
             showAlert(message: "Este correo electrónico ya está registrado.")
             return
         }
         
-        // Verificar si el nombre de usuario ya está registrado
+        // verificar si el nombre de usuario ya esta registrado
         for (_, userData) in usersDict {
             if let existingUsername = userData["username"] as? String, existingUsername == username {
                 showAlert(message: "Este nombre de usuario ya está en uso.")
@@ -62,7 +61,7 @@ class RegisterViewController: UIViewController {
             }
         }
         
-        // Guardar todos los datos del usuario
+        // guardar todos los datos del usuario
         let userData: [String: Any] = [
             "name": name,
             "username": username,
@@ -79,7 +78,7 @@ class RegisterViewController: UIViewController {
         print("Usuario registrado: \(userData)")
     }
     
-    // Función para validar formato de correo electrónico
+    // funcion para validar formato de correo electronico
     func isValidEmail(_ email: String) -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
