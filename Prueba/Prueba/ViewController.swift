@@ -18,11 +18,6 @@ class LoginViewController: UIViewController {
 
         view.backgroundColor = UIColor(red: 248/255, green: 251/255, blue: 255/255, alpha: 1.0)
 
-        LoginTitleFieldText.font = UIFont.boldSystemFont(ofSize: 32)
-        LoginTitleFieldText.textColor = UIColor(red: 133/255, green: 193/255, blue: 233/255, alpha: 1.0)
-
-        LoginForgotPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-
         // desabilitar login al inicio
         
         LoginButton.isEnabled = false
