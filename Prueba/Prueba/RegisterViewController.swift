@@ -1,7 +1,7 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet weak var RegisterTitleTextLabel: UILabel!
     @IBOutlet weak var RegisterUsernameTextField: UITextField!
     @IBOutlet weak var RegisterEmailTextField: UITextField!
@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         
     }
-
+    
     
     @IBAction func createAccount(_ sender: UIButton) {
         guard let username = RegisterUsernameTextField.text, !username.isEmpty,
@@ -25,7 +25,7 @@ class RegisterViewController: UIViewController {
             showAlert(message: "Todos los campos son obligatorios.")
             return
         }
-
+        
         // validar que las contraseñas coincidan
         if password != repeatPassword {
             showAlert(message: "Las contraseñas no coinciden.")
@@ -37,7 +37,7 @@ class RegisterViewController: UIViewController {
             showAlert(message: "El formato del correo electrónico no es válido.")
             return
         }
-
+        
         // obtener usuarios existentes
         var usersDict = UserDefaults.standard.dictionary(forKey: "usersData") as? [String: [String: Any]] ?? [:]
         
@@ -64,7 +64,7 @@ class RegisterViewController: UIViewController {
         
         usersDict[email] = userData
         UserDefaults.standard.setValue(usersDict, forKey: "usersData")
-
+        
         showAlert(message: "Usuario registrado con éxito. Ahora puedes iniciar sesión.") {
             self.dismiss(animated: true)
         }
@@ -79,7 +79,7 @@ class RegisterViewController: UIViewController {
     }
     
     //alertas
-
+    
     func showAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: "Registro", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in

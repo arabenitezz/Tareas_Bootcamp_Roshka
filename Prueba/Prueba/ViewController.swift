@@ -9,35 +9,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var LoginForgotPasswordButton: UIButton!
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var LoginRegisterButton: UIButton!
-
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
-
+        
         // desabilitar login al inicio
         LoginButton.isEnabled = false
-
+        
         // detectar cambios en los textfields
         LoginUserNameTextField.addTarget(self, action: #selector(verificarCampos), for: .editingChanged)
         LoginPasswordTextField.addTarget(self, action: #selector(verificarCampos), for: .editingChanged)
     }
-
+    
     // verificar q los campos no esten vacios
     @objc func verificarCampos() {
         let usuario = LoginUserNameTextField.text ?? ""
         let contraseña = LoginPasswordTextField.text ?? ""
         LoginButton.isEnabled = !usuario.isEmpty && !contraseña.isEmpty
     }
-
+    
     @IBAction func iniciarSesion(_ sender: UIButton) {
         guard let emailOrUsername = LoginUserNameTextField.text, !emailOrUsername.isEmpty,
               let password = LoginPasswordTextField.text, !password.isEmpty else {
             showAlert(message: "Todos los campos son obligatorios.")
             return
         }
-
+        
         // Obtener todos los usuarios
         let usersDict = UserDefaults.standard.dictionary(forKey: "usersData") as? [String: [String: Any]] ?? [:]
         
@@ -77,13 +77,13 @@ class LoginViewController: UIViewController {
             showAlert(message: "Usuario o contraseña incorrectos.")
         }
     }
-
+    
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Inicio de Sesión", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-
+    
     @IBAction func goToRegister(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRegisterSegue", sender: self)
     }

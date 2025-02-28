@@ -1,7 +1,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var LeaderBoardTitleLabel: UILabel!
     @IBOutlet weak var LeaderboardListOfUsersLabel: UILabel!
     
