@@ -13,7 +13,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
-        self.navigationItem.setHidesBackButton(false, animated: false)
         
     }
 

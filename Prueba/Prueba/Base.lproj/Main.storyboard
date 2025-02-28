@@ -457,7 +457,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fSw-d5-rjR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" hidesBarsOnSwipe="YES" id="KH5-j0-ua9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="KH5-j0-ua9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PX6-6x-lNa">
                         <rect key="frame" x="0.0" y="62" width="402" height="44"/>

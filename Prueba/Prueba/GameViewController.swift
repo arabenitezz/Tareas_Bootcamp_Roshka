@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            self.navigationItem.setHidesBackButton(false, animated: false)
+        
             timerLabel.text = "30"
             scoreLabel.text = "Puntaje: 0"
             ballButton.isHidden = true
