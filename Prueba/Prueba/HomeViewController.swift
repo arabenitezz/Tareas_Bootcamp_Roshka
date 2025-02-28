@@ -19,10 +19,17 @@ class HomeViewController: UIViewController {
     }
     
     private func loadLeaderboard() {
+        
+        // userdefaults para el leaderboard
         let leaderboard = UserDefaults.standard.dictionary(forKey: "leaderboard") as? [String: Int] ?? [:]
+        
+        // nuevo array sorted
+        
         let sortedLeaderboard = leaderboard.sorted { $0.value > $1.value }
         
         LeaderBoardTitleLabel.text = "Top 5 puntajes"
+        
+        // variable para la lista
         
         var leaderboardText = ""
         for (index, entry) in sortedLeaderboard.prefix(5).enumerated() {
