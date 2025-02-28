@@ -8,12 +8,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var RegisterPasswordTextField: UITextField!
     @IBOutlet weak var RegisterRepeatPasswordTextField: UITextField!
     @IBOutlet weak var RegisterCreateAccountButton: UIButton!
-    @IBOutlet weak var RegisterAlreadyHaveAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
+        self.navigationItem.setHidesBackButton(false, animated: false)
         
     }
 

@@ -8,6 +8,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(false, animated: false)
         
         loadLeaderboard()
     }

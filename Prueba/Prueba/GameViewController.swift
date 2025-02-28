@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.navigationItem.setHidesBackButton(false, animated: false)
             timerLabel.text = "30"
             scoreLabel.text = "Puntaje: 0"
             ballButton.isHidden = true
@@ -78,6 +79,8 @@ class GameViewController: UIViewController {
     @IBAction func ballTapped(_ sender: UIButton) {
         score += 1
         scoreLabel.text = "Puntaje: \(score)"
+        print(ballButton.frame.origin.x)
+        print(ballButton.frame.origin.y)
         // funcion para mover la pelota
         moveBall()
     }

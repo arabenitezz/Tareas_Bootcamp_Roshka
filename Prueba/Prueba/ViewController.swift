@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
+        self.navigationItem.setHidesBackButton(false, animated: false)
 
         // desabilitar login al inicio
         LoginButton.isEnabled = false
