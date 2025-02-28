@@ -17,9 +17,6 @@ class RegisterViewController: UIViewController {
         
     }
 
-    @IBAction func goToLogin(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
     
     @IBAction func createAccount(_ sender: UIButton) {
         guard let username = RegisterUsernameTextField.text, !username.isEmpty,
@@ -81,6 +78,8 @@ class RegisterViewController: UIViewController {
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)
     }
+    
+    //alertas
 
     func showAlert(message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: "Registro", message: message, preferredStyle: .alert)
