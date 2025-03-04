@@ -10,9 +10,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        makeHand()
-        verifyHand()
+
     }
     
     @IBAction func shuffleButtonTapped(_ sender: UIButton) {
@@ -20,16 +18,10 @@ class ViewController: UIViewController {
         verifyHand()
     }
     
-    var firstDice = Int.random(in: 1...6)
-    var secondDice = Int.random(in: 1...6)
-    var thirdDice = Int.random(in: 1...6)
-    var fourthDice = Int.random(in: 1...6)
-    var fifthDice = Int.random(in: 1...6)
-    
     var generalaHand = [Int]()
     
     func makeHand() {
-        generalaHand = [firstDice, secondDice, thirdDice, fourthDice, fifthDice]
+        generalaHand = (0..<5).map { _ in Int.random(in: 1...6) }
     }
     
     func verifyHand() {
@@ -37,18 +29,19 @@ class ViewController: UIViewController {
         DiceResultsUILabel.text = "Dados: \(generalaHand)"
         
         if verifyGenerala() {
-            print("tenes una generala")
+            HandsResultsUILabel.text = "Tenes general"
             
         } else if  verifyPoker() {
-            print("tenes poker")
+            HandsResultsUILabel.text = "Tenes poker"
             
         } else if verifyFull() {
-            print("tenes full")
+            HandsResultsUILabel.text = "Tenes full"
             
         } else if verifyEscalera() {
-            print("tenes escalera")
+            HandsResultsUILabel.text = "Tenes escalera"
+            
         } else {
-            print("no tenes nada")
+            HandsResultsUILabel.text = "No tenes nada"
         }
     }
     
