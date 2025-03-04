@@ -2,12 +2,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var HandsResultsUILabel: UILabel!
+    @IBOutlet weak var ShuffleButtonUIButton: UIButton!
+    @IBOutlet weak var DiceResultsUILabel: UILabel!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         makeHand()
-        print("Dados: \(generalaHand)")
+        verifyHand()
+    }
+    
+    @IBAction func shuffleButtonTapped(_ sender: UIButton) {
+        makeHand()
         verifyHand()
     }
     
@@ -24,6 +33,9 @@ class ViewController: UIViewController {
     }
     
     func verifyHand() {
+        
+        DiceResultsUILabel.text = "Dados: \(generalaHand)"
+        
         if verifyGenerala() {
             print("tenes una generala")
             
