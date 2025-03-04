@@ -33,19 +33,18 @@ class ViewController: UIViewController {
         } else if verifyFull() {
             print("tenes full")
             
+        } else if verifyEscalera() {
+            print("tenes escalera")
         } else {
             print("no tenes nada")
         }
     }
     
     func verifyGenerala() -> Bool {
-        
         return Set(generalaHand).count == 1
     }
     
-    
     func verifyPoker() -> Bool {
-        
         let frequencies = generalaHand.reduce(into: [:]) { counts, number in
             counts[number, default: 0] += 1
         }
@@ -54,14 +53,24 @@ class ViewController: UIViewController {
     }
     
     func verifyFull() -> Bool {
-        
         let frequencies = generalaHand.reduce(into: [:]) { counts, number in
             counts[number, default: 0] += 1
         }
         
-        return frequencies.values.contains(3)
-        
+        return frequencies.values.contains(3) && frequencies.values.contains(2)
     }
     
+    func verifyEscalera() -> Bool {
+    
+        let sortedHand = generalaHand.sorted()
+        
+        for i in 0..<sortedHand.count - 1 {
+            if sortedHand[i + 1] - sortedHand[i] != 1 {
+                return false
+            }
+        }
+        
+        return true
+    }
 }
 
