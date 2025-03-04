@@ -1,8 +1,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         makeHand()
         print("Dados: \(generalaHand)")
         verifyHand()
@@ -22,18 +25,43 @@ class ViewController: UIViewController {
     
     func verifyHand() {
         if verifyGenerala() {
-            print("¡Tenés una Generala!")
+            print("tenes una generala")
+            
+        } else if  verifyPoker() {
+            print("tenes poker")
+            
+        } else if verifyFull() {
+            print("tenes full")
+            
         } else {
-            print("No es Generala")
+            print("no tenes nada")
         }
     }
     
     func verifyGenerala() -> Bool {
-    
+        
         return Set(generalaHand).count == 1
     }
     
-}
     
-
+    func verifyPoker() -> Bool {
+        
+        let frequencies = generalaHand.reduce(into: [:]) { counts, number in
+            counts[number, default: 0] += 1
+        }
+        
+        return frequencies.values.contains(4)
+    }
+    
+    func verifyFull() -> Bool {
+        
+        let frequencies = generalaHand.reduce(into: [:]) { counts, number in
+            counts[number, default: 0] += 1
+        }
+        
+        return frequencies.values.contains(3)
+        
+    }
+    
+}
 
