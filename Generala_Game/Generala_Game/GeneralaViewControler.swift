@@ -29,19 +29,19 @@ class ViewController: UIViewController {
         DiceResultsUILabel.text = "Dados: \(generalaHand)"
         
         if verifyGenerala() {
-            HandsResultsUILabel.text = "Tenes general"
+            HandsResultsUILabel.text = "Tenes generala 🎲"
             
         } else if  verifyPoker() {
-            HandsResultsUILabel.text = "Tenes poker"
+            HandsResultsUILabel.text = "Tenes poker 🃏"
             
         } else if verifyFull() {
-            HandsResultsUILabel.text = "Tenes full"
+            HandsResultsUILabel.text = "Tenes full 🔥"
             
         } else if verifyEscalera() {
-            HandsResultsUILabel.text = "Tenes escalera"
+            HandsResultsUILabel.text = "Tenes escalera 🪜 :D"
             
         } else {
-            HandsResultsUILabel.text = "No tenes nada"
+            HandsResultsUILabel.text = "No tenes nada :("
         }
     }
     

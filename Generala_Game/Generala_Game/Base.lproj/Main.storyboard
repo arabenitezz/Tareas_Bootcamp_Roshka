@@ -5,7 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,49 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yen-5S-pog">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10089352" translatesAutoresizingMaskIntoConstraints="NO" id="yen-5S-pog">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="Faf-n4-C2p">
-                                <rect key="frame" x="50" y="119.00000000000001" width="293" height="218.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Faf-n4-C2p">
+                                <rect key="frame" x="50" y="288" width="293" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43h-Kv-dU3">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="20.333333333333332"/>
+                                        <rect key="frame" x="104.66666666666666" y="0.0" width="83.666666666666657" height="31.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0I-Hc-xSz">
-                                        <rect key="frame" x="0.0" y="61.333333333333343" width="293" height="34.333333333333343"/>
+                                        <rect key="frame" x="75" y="39.333333333333314" width="143" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Ulr-ar-TmA"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="cartoon_style_dice-Photoroom-2">
+                                            <color key="baseBackgroundColor" red="0.98039215800000001" green="0.92941176889999999" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="shuffleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blu-oA-vaU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tus dados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh6-fj-kgf">
-                                        <rect key="frame" x="0.0" y="136.66666666666666" width="293" height="20.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tus dados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh6-fj-kgf">
+                                        <rect key="frame" x="107.33333333333334" y="187.33333333333331" width="78.666666666666657" height="31.666666666666657"/>
+                                        <color key="backgroundColor" red="0.98039215800000001" green="0.92941176889999999" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu resultado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guh-w7-zWg">
-                                        <rect key="frame" x="0.0" y="198" width="293" height="20.333333333333343"/>
+                                        <rect key="frame" x="99.333333333333343" y="227" width="94.333333333333343" height="73"/>
+                                        <color key="backgroundColor" red="0.98039215800000001" green="0.92941176889999999" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.92941176889999999" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="C0I-Hc-xSz" firstAttribute="centerX" secondItem="Faf-n4-C2p" secondAttribute="centerX" id="1Ae-yM-g62"/>
                                     <constraint firstItem="43h-Kv-dU3" firstAttribute="centerX" secondItem="Faf-n4-C2p" secondAttribute="centerX" id="2vd-LE-fZu"/>
                                     <constraint firstItem="guh-w7-zWg" firstAttribute="centerX" secondItem="Faf-n4-C2p" secondAttribute="centerX" id="6KF-EK-goz"/>
+                                    <constraint firstAttribute="height" constant="300" id="7eb-pX-45G"/>
                                     <constraint firstItem="Sh6-fj-kgf" firstAttribute="centerX" secondItem="Faf-n4-C2p" secondAttribute="centerX" id="Gcv-DO-0h7"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98039215800000001" green="0.92941176889999999" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="yen-5S-pog" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0gu-Bt-wkn"/>
                             <constraint firstItem="Faf-n4-C2p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cb0-En-i3U"/>
@@ -67,7 +76,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yen-5S-pog" secondAttribute="bottom" id="Ghj-GU-cWV"/>
                             <constraint firstItem="yen-5S-pog" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JrC-JQ-eZU"/>
                             <constraint firstItem="Faf-n4-C2p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="VpO-bg-c4M"/>
-                            <constraint firstItem="Faf-n4-C2p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="f6i-ED-ft8"/>
+                            <constraint firstItem="Faf-n4-C2p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="229" id="f6i-ED-ft8"/>
                             <constraint firstItem="yen-5S-pog" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k3P-qV-Iiz"/>
                             <constraint firstItem="yen-5S-pog" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lMJ-Ch-V6F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Faf-n4-C2p" secondAttribute="trailing" constant="50" id="y2F-6Y-Aef"/>
@@ -85,8 +94,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="10089352" width="2000" height="2000"/>
+        <image name="cartoon_style_dice-Photoroom-2" width="119" height="119"/>
     </resources>
 </document>
