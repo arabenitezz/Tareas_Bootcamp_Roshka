@@ -10,10 +10,33 @@ class ViewController: UIViewController {
         
         for card in randomCards {
             print("Carta: \(card.value) de \(card.suit)")
+            
         }
-    
+            
+            // Verificar manos
+            if PokerHandChecker.checkStraightFlush(hand: randomCards) {
+                print("¡Tienes un Straight Flush!")
+            } else if PokerHandChecker.checkPoker(hand: randomCards) {
+                print("¡Tienes un Póker!")
+            } else if PokerHandChecker.checkFullHouse(hand: randomCards) {
+                print("¡Tienes un Full House!")
+            } else if PokerHandChecker.checkFlush(hand: randomCards) {
+                print("¡Tienes un Flush!")
+            } else if PokerHandChecker.checkStraight(hand: randomCards) {
+                print("¡Tienes un Straight!")
+            } else if PokerHandChecker.checkThree(hand: randomCards) {
+                print("¡Tienes un Trío!")
+            } else if PokerHandChecker.checkTwoPair(hand: randomCards) {
+                print("¡Tienes dos pares!")
+            } else if PokerHandChecker.checkPair(hand: randomCards) {
+                print("¡Tienes un par!")
+            } else if let highCard = PokerHandChecker.checkHighCard(hand: randomCards) {
+                print("Tu carta alta es: \(highCard.value) de \(highCard.suit)")
+            }
+        }
+        
     }
-}
+
 
 // definimos los palos con un Enum
 enum Suit: String {

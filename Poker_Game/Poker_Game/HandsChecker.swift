@@ -84,8 +84,9 @@ class PokerHandChecker {
         let valueCounts = Dictionary(grouping: hand, by: { $0.value })
             .mapValues { $0.count }
         
-        // verificar si algun valor aparece 2 veces y otro 2 veces
-        return valueCounts.values.contains(2) && valueCounts.values.contains(2)
+        // Contar cuantos pares hay
+        let pairsCount = valueCounts.values.filter { $0 == 2 }.count
+        return pairsCount == 2
         
     }
     
@@ -101,9 +102,9 @@ class PokerHandChecker {
         
     }
     
-    func checkHighCard(hand:[Card]) -> Bool {
-        return false
-        
+    func checkHighCard(hand: [Card]) -> Card? {
+        // comparar cada valor en el array
+        return hand.max(by: { Card.valueToInt(value: $0.value) < Card.valueToInt(value: $1.value) })
     }
     
 }
