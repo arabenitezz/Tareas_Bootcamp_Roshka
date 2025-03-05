@@ -4,18 +4,19 @@ import Foundation
 
 class PokerHandChecker {
     
-    func checkRoyalFlush(hand: [Card]) -> Bool {
-        
+    func checkStraightFlush(hand: [Card]) -> Bool {
         return false
         
     }
     
     func checkPoker(hand: [Card]) -> Bool {
         return false
+        
     }
     
     func checkFullHouse(hand: [Card]) -> Bool {
         return false
+        
     }
     
     func checkFlush(hand: [Card]) -> Bool {
@@ -30,17 +31,21 @@ class PokerHandChecker {
     
     func checkThree(hand: [Card]) -> Bool {
         return false
+        
     }
     
     func checkTwoPair(hand:[Card]) -> Bool {
         return false
+        
     }
     
     func checkPair(hand:[Card]) -> Bool {
         return false
+        
     }
     
     func checkHighCard(hand:[Card]) -> Bool {
         return false
+        
     }
 }
