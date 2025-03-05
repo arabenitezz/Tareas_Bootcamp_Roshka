@@ -66,16 +66,14 @@ class ViewController: UIViewController {
     }
     
     func verifyEscalera() -> Bool {
-    
-        let sortedHand = generalaHand.sorted()
         
-        for i in 0..<sortedHand.count - 1 {
-            if sortedHand[i + 1] - sortedHand[i] != 1 {
-                return false
-            }
+        let sortedHand = Set(generalaHand).sorted()
+        
+        if sortedHand == [1, 2, 3, 4, 5] || sortedHand == [2, 3, 4, 5, 6] {
+            return true
         }
         
-        return true
+        return false
     }
 }
 
