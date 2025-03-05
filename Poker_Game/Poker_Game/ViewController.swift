@@ -4,16 +4,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let deck = Deck()
+        let randomCards = deck.makeHand(count: 5)
+        
+        for card in randomCards {
+            print("Carta: \(card.value) de \(card.suit)")
+        }
     
     }
 }
 
 // definimos los palos con un Enum
 enum Suit: String {
-    case spades = "S"
-    case clubs = "C"
-    case hearts = "H"
-    case diamonds = "D"
+    case espada = "S"
+    case trebol = "C"
+    case corazon = "H"
+    case diamante = "D"
 }
 
 // definimos la clase Card con un inicializador
@@ -33,7 +40,7 @@ class Deck {
     
     init() {
         let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K"]
-        let suits: [Suit] = [.spades, .clubs, .hearts, .diamonds]
+        let suits: [Suit] = [.espada, .trebol, .corazon, .diamante]
         
         // Generamos todas las cartas
         for suit in suits {
@@ -44,5 +51,16 @@ class Deck {
     }
     
 }
+
+
+extension Deck {
+    func makeHand(count: Int) -> [Card] {
+        guard count <= cards.count else {
+            return []
+        }
+        return Array(cards.shuffled().prefix(count))
+    }
+}
+
 
 
