@@ -44,11 +44,24 @@ class PokerHandChecker {
     
     func checkFlush(hand: [Card]) -> Bool {
         
-        return false
+        // mismo palo
+        guard let firstSuit = hand.first?.suit else { return false }
+        return hand.allSatisfy { $0.suit == firstSuit }
+        
     }
     
     func checkStraight(hand: [Card]) -> Bool {
-        return false
+        
+        // obtener los valores de las cartas y convertirlos a números
+        let values = hand.map { Card.valueToInt(value: $0.value) }.sorted()
+        
+        // verificar si los valores están en secuencia
+        let isSequential = values == Array(values[0]...values[0] + 4)
+        
+        // verificar el caso especial del As como 14
+        let isSequentialWithAceHigh = values == [1, 2, 3, 4, 5] || values == [10, 11, 12, 13, 14]
+        
+        return isSequential || isSequentialWithAceHigh
         
     }
     
