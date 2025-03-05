@@ -66,17 +66,38 @@ class PokerHandChecker {
     }
     
     func checkThree(hand: [Card]) -> Bool {
-        return false
+        
+        // contador de frecuencia
+        
+        let valueCounts = Dictionary(grouping: hand, by: { $0.value })
+            .mapValues { $0.count }
+        
+        // verificar si algun valor aparece 3 veces
+        return valueCounts.values.contains(3)
         
     }
     
     func checkTwoPair(hand:[Card]) -> Bool {
-        return false
+        
+        // contador de frecuencia
+        
+        let valueCounts = Dictionary(grouping: hand, by: { $0.value })
+            .mapValues { $0.count }
+        
+        // verificar si algun valor aparece 2 veces y otro 2 veces
+        return valueCounts.values.contains(2) && valueCounts.values.contains(2)
         
     }
     
     func checkPair(hand:[Card]) -> Bool {
-        return false
+        
+        // contador de frecuencia
+        
+        let valueCounts = Dictionary(grouping: hand, by: { $0.value })
+            .mapValues { $0.count }
+        
+        // verificar si algun valor aparece 2 veces
+        return valueCounts.values.contains(2)
         
     }
     
