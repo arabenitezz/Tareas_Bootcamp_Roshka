@@ -20,7 +20,23 @@ class ViewController: UIViewController {
         let deck = Deck()
         
         let randomCards = deck.makeHand(count: 5)
-        let randomCards2 = deck.makeHand(count: 5)
+        
+        // hacer que la segunda mano no tenga cartas que ya estan en la primera mano
+        
+        var randomCards2 = deck.makeHand(count: 5)
+        
+        // Filtrar las cartas de randomCards2 para excluir las que estan en randomCards
+        randomCards2 = randomCards2.filter { card in
+            !randomCards.contains(where: { $0.value == card.value && $0.suit == card.suit })
+        }
+        
+        // Si randomCards2 tiene menos de 5 cartas después de filtrar, generar nuevas cartas
+        while randomCards2.count < 5 {
+            let additionalCards = deck.makeHand(count: 5 - randomCards2.count)
+            randomCards2 += additionalCards.filter { card in
+                !randomCards.contains(where: { $0.value == card.value && $0.suit == card.suit })
+            }
+        }
         
         // Mostrar todas las cartas correctamente
         CardsUILabel.text = randomCards.map { "\($0.value) \($0.suit.rawValue)" }.joined(separator: ", ")
