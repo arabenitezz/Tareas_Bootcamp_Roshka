@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var CardsUILabel2: UILabel!
     @IBOutlet weak var ResultsUILabel: UILabel!
     @IBOutlet weak var ResultsUILabel2: UILabel!
+    @IBOutlet weak var WinnerUILabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -80,6 +81,12 @@ class ViewController: UIViewController {
         
         // Asignar el resultado
         ResultsUILabel2.text = "Tienes: \(resultText2)"
+        
+        // Determinar el ganador
+        
+        let winnerMessage = verifyWinner(resultText1: resultText, resultText2: resultText2)
+        
+        WinnerUILabel.text = winnerMessage
     }
     
 }
