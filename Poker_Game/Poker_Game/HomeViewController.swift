@@ -103,6 +103,8 @@ class ViewController: UIViewController {
         let winnerMessage = verifyWinner(resultText1: resultText, resultText2: resultText2)
         
         WinnerUILabel.text = winnerMessage
+        
+        
     }
     
 }
