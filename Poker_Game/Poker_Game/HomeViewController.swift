@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         
         // Determinar el ganador
         
-        let winnerMessage = verifyWinner(resultText1: resultText, resultText2: resultText2)
+        let winnerMessage = verifyWinner(resultText1: resultText, resultText2: resultText2, hand1: randomCards, hand2: randomCards2)
         
         WinnerUILabel.text = winnerMessage
         

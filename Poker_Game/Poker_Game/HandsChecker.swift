@@ -13,14 +13,14 @@ class PokerHandChecker {
         if values == [1, 2, 3, 4, 5] {
             return true
         }
-
+        
         // Si hay un As (1), intentamos una nueva lista con el As como 14
         let valuesWithAceHigh = values.map { $0 == 1 ? 14 : $0 }.sorted()
-
+        
         // Verificamos si hay una secuencia normal
         let isSequential = values == Array(values[0]...values[0] + 4)
         let isSequentialWithAceHigh = valuesWithAceHigh == [10, 11, 12, 13, 14]
-
+        
         return isSequential || isSequentialWithAceHigh
     }
     
@@ -58,22 +58,22 @@ class PokerHandChecker {
     
     static func checkStraight(hand: [Card]) -> Bool {
         let values = hand.map { Card.valueToInt(value: $0.value) }.sorted()
-
+        
         // Verificamos escalera baja (A-2-3-4-5) antes de cualquier otra cosa
         if values == [1, 2, 3, 4, 5] {
             return true
         }
-
+        
         // Si hay un As (1), intentamos una nueva lista con el As como 14
         let valuesWithAceHigh = values.map { $0 == 1 ? 14 : $0 }.sorted()
-
+        
         // Verificamos si hay una secuencia normal
         let isSequential = values == Array(values[0]...values[0] + 4)
         let isSequentialWithAceHigh = valuesWithAceHigh == [10, 11, 12, 13, 14]
-
+        
         return isSequential || isSequentialWithAceHigh
     }
-
+    
     
     static func checkThree(hand: [Card]) -> Bool {
         
@@ -120,7 +120,7 @@ class PokerHandChecker {
         }
         
         return hand.max(by: { getCardValue($0) < getCardValue($1)})
-        }
+    }
     
 }
 

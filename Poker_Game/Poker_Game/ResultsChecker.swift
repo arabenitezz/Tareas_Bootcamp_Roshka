@@ -21,7 +21,7 @@ func HandRank(from resultText: String) -> HandValues {
     switch resultText {
     case "Escalera de color":
         return .straightFlush
-    
+        
     case "Poker":
         return .poker
         
@@ -51,7 +51,7 @@ func HandRank(from resultText: String) -> HandValues {
 
 // verificar al ganador
 
-func verifyWinner(resultText1: String, resultText2: String) -> String {
+func verifyWinner(resultText1: String, resultText2: String, hand1: [Card], hand2: [Card]) -> String {
     
     let handRank1 = HandRank(from: resultText1)
     let handRank2 = HandRank(from: resultText2)
@@ -61,7 +61,8 @@ func verifyWinner(resultText1: String, resultText2: String) -> String {
     } else if handRank1.rawValue < handRank2.rawValue {
         return "Jugador 2 gana"
     } else {
-        return "empate"
+        // Si tienen el mismo tipo de mano, resolvemos el empate
+        return TieBreaker.resolveTie(hand1: hand1, hand2: hand2, handType: handRank1)
     }
 }
 
