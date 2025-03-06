@@ -20,19 +20,19 @@
                                 <rect key="frame" x="20" y="109" width="353" height="659"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-jh-1Lw">
-                                        <rect key="frame" x="155.66666666666666" y="357" width="42" height="21"/>
+                                        <rect key="frame" x="155.66666666666666" y="376" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJp-R1-anv">
-                                        <rect key="frame" x="155.66666666666666" y="438" width="42" height="21"/>
+                                        <rect key="frame" x="155.66666666666666" y="457" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ8-aW-Ztt">
-                                        <rect key="frame" x="139" y="262" width="75" height="35"/>
+                                        <rect key="frame" x="139" y="262" width="75" height="54"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                         <connections>
@@ -51,12 +51,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9o-Dr-tCK">
+                                        <rect key="frame" x="155.66666666666666" y="538" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="T9o-Dr-tCK" firstAttribute="centerX" secondItem="f51-uC-YSV" secondAttribute="centerX" id="3NB-Mf-eLP"/>
                                     <constraint firstItem="quu-pw-d3m" firstAttribute="top" secondItem="A2M-mv-cOK" secondAttribute="bottom" constant="60" id="4TN-Qq-nbf"/>
                                     <constraint firstItem="quu-pw-d3m" firstAttribute="centerX" secondItem="f51-uC-YSV" secondAttribute="centerX" id="7Nz-Pj-KXB"/>
                                     <constraint firstItem="A2M-mv-cOK" firstAttribute="centerX" secondItem="f51-uC-YSV" secondAttribute="centerX" id="7Qn-Ji-ckM"/>
+                                    <constraint firstItem="T9o-Dr-tCK" firstAttribute="top" secondItem="HJp-R1-anv" secondAttribute="bottom" constant="60" id="EGY-FP-fHV"/>
+                                    <constraint firstAttribute="bottom" secondItem="T9o-Dr-tCK" secondAttribute="bottom" constant="100" id="HHf-6J-1qD"/>
                                     <constraint firstItem="HJp-R1-anv" firstAttribute="centerX" secondItem="f51-uC-YSV" secondAttribute="centerX" id="ITE-V2-4Uz"/>
                                     <constraint firstItem="zOV-jh-1Lw" firstAttribute="top" secondItem="eZ8-aW-Ztt" secondAttribute="bottom" constant="60" id="OyV-K5-8kU"/>
                                     <constraint firstItem="eZ8-aW-Ztt" firstAttribute="centerX" secondItem="f51-uC-YSV" secondAttribute="centerX" id="bhd-F8-ZYo"/>
@@ -84,6 +93,7 @@
                         <outlet property="PlayerHandButtonUIButton" destination="eZ8-aW-Ztt" id="nmN-5F-vEv"/>
                         <outlet property="ResultsUILabel" destination="quu-pw-d3m" id="c8i-1R-VJL"/>
                         <outlet property="ResultsUILabel2" destination="zOV-jh-1Lw" id="pby-Po-oIl"/>
+                        <outlet property="WinnerUILabel" destination="T9o-Dr-tCK" id="hXH-xB-DTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

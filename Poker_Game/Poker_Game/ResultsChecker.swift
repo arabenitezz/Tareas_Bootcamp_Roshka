@@ -4,7 +4,7 @@ import Foundation
 
 enum HandValues: Int {
     case highCard = 1
-    case pair = 2
+    case pairA = 2
     case twoPair = 3
     case threeOfAKind = 4
     case straight = 5
@@ -41,7 +41,7 @@ func HandRank(from resultText: String) -> HandValues {
         return .twoPair
         
     case "Par":
-        return .pair
+        return .pairA
         
     default:
         return .highCard
@@ -57,9 +57,9 @@ func verifyWinner(resultText1: String, resultText2: String) -> String {
     let handRank2 = HandRank(from: resultText2)
     
     if handRank1.rawValue > handRank2.rawValue {
-        return "Jugador 1 gana con \(handRank1)"
-    } else if handRank2.rawValue > handRank1.rawValue {
-        return "Jugador 2 gana con \(handRank2)"
+        return "Jugador 1 gana"
+    } else if handRank1.rawValue < handRank2.rawValue {
+        return "Jugador 2 gana"
     } else {
         return "empate"
     }

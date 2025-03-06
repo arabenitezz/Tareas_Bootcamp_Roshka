@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         if PokerHandChecker.checkStraightFlush(hand: randomCards) {
             resultText = "Escalera de color"
         } else if PokerHandChecker.checkPoker(hand: randomCards) {
-            resultText = "Póker"
+            resultText = "Poker"
         } else if PokerHandChecker.checkFullHouse(hand: randomCards) {
             resultText = "Full House"
         } else if PokerHandChecker.checkFlush(hand: randomCards) {
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         } else if PokerHandChecker.checkStraight(hand: randomCards) {
             resultText = "Escalera"
         } else if PokerHandChecker.checkThree(hand: randomCards) {
-            resultText = "Trío"
+            resultText = "Trio"
         } else if PokerHandChecker.checkTwoPair(hand: randomCards) {
             resultText = "Doble Par"
         } else if PokerHandChecker.checkPair(hand: randomCards) {
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         if PokerHandChecker.checkStraightFlush(hand: randomCards2) {
             resultText2 = "Escalera de color"
         } else if PokerHandChecker.checkPoker(hand: randomCards2) {
-            resultText2 = "Póker"
+            resultText2 = "Poker"
         } else if PokerHandChecker.checkFullHouse(hand: randomCards2) {
             resultText2 = "Full House"
         } else if PokerHandChecker.checkFlush(hand: randomCards2) {
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         } else if PokerHandChecker.checkStraight(hand: randomCards2) {
             resultText2 = "Escalera"
         } else if PokerHandChecker.checkThree(hand: randomCards2) {
-            resultText2 = "Trío"
+            resultText2 = "Trio"
         } else if PokerHandChecker.checkTwoPair(hand: randomCards2) {
             resultText2 = "Doble Par"
         } else if PokerHandChecker.checkPair(hand: randomCards2) {
