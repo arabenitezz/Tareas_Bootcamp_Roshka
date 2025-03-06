@@ -18,7 +18,7 @@ class PokerHandChecker {
         return isSequential || isSequentialWithAceHigh
     }
     
-    func checkPoker(hand: [Card]) -> Bool {
+    static func checkPoker(hand: [Card]) -> Bool {
         
         // contador de frecuencia
         
@@ -30,7 +30,7 @@ class PokerHandChecker {
         
     }
     
-    func checkFullHouse(hand: [Card]) -> Bool {
+    static func checkFullHouse(hand: [Card]) -> Bool {
         
         // contador de frecuencia
         
@@ -42,7 +42,7 @@ class PokerHandChecker {
         
     }
     
-    func checkFlush(hand: [Card]) -> Bool {
+    static func checkFlush(hand: [Card]) -> Bool {
         
         // mismo palo
         guard let firstSuit = hand.first?.suit else { return false }
@@ -50,7 +50,7 @@ class PokerHandChecker {
         
     }
     
-    func checkStraight(hand: [Card]) -> Bool {
+    static func checkStraight(hand: [Card]) -> Bool {
         
         // obtener los valores de las cartas y convertirlos a números
         let values = hand.map { Card.valueToInt(value: $0.value) }.sorted()
@@ -65,7 +65,7 @@ class PokerHandChecker {
         
     }
     
-    func checkThree(hand: [Card]) -> Bool {
+    static func checkThree(hand: [Card]) -> Bool {
         
         // contador de frecuencia
         
@@ -77,7 +77,7 @@ class PokerHandChecker {
         
     }
     
-    func checkTwoPair(hand:[Card]) -> Bool {
+    static func checkTwoPair(hand:[Card]) -> Bool {
         
         // contador de frecuencia
         
@@ -90,7 +90,7 @@ class PokerHandChecker {
         
     }
     
-    func checkPair(hand:[Card]) -> Bool {
+    static func checkPair(hand:[Card]) -> Bool {
         
         // contador de frecuencia
         
@@ -102,9 +102,14 @@ class PokerHandChecker {
         
     }
     
-    func checkHighCard(hand: [Card]) -> Card? {
-        // comparar cada valor en el array
-        return hand.max(by: { Card.valueToInt(value: $0.value) < Card.valueToInt(value: $1.value) })
-    }
+    static func checkHighCard(hand: [Card]) -> Card? {
+        
+        func getCardValue(_ card: Card) -> Int {
+            let baseValue = Card.valueToInt(value: card.value)
+            return (card.value == "A") ? 14: baseValue
+        }
+        
+        return hand.max(by: { getCardValue($0) < getCardValue($1)})
+        }
     
 }
