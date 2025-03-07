@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A4B0B152D7B271A009CD737 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B142D7B271A009CD737 /* Alamofire */; };
-		2A4B0B172D7B271A009CD737 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B162D7B271A009CD737 /* AlamofireDynamic */; };
 		2A4B0B212D7B690F009CD737 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B202D7B690F009CD737 /* Kingfisher */; };
 		2A4B0B382D7B6D04009CD737 /* Sniffer in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B372D7B6D04009CD737 /* Sniffer */; };
+		2A4B0B412D7B75A0009CD737 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B402D7B75A0009CD737 /* Alamofire */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A1D83F22D7B75DD007D7ECE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A4B0AFB2D7B25E0009CD737 /* Pokemon_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4B0B412D7B75A0009CD737 /* Alamofire in Frameworks */,
 				2A4B0B382D7B6D04009CD737 /* Sniffer in Frameworks */,
 				2A4B0B212D7B690F009CD737 /* Kingfisher in Frameworks */,
-				2A4B0B152D7B271A009CD737 /* Alamofire in Frameworks */,
-				2A4B0B172D7B271A009CD737 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +90,7 @@
 				2A4B0AF72D7B25E0009CD737 /* Sources */,
 				2A4B0AF82D7B25E0009CD737 /* Frameworks */,
 				2A4B0AF92D7B25E0009CD737 /* Resources */,
+				2A1D83F22D7B75DD007D7ECE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -89,10 +101,9 @@
 			);
 			name = Pokemon_Project;
 			packageProductDependencies = (
-				2A4B0B142D7B271A009CD737 /* Alamofire */,
-				2A4B0B162D7B271A009CD737 /* AlamofireDynamic */,
 				2A4B0B202D7B690F009CD737 /* Kingfisher */,
 				2A4B0B372D7B6D04009CD737 /* Sniffer */,
+				2A4B0B402D7B75A0009CD737 /* Alamofire */,
 			);
 			productName = Pokemon_Project;
 			productReference = 2A4B0AFB2D7B25E0009CD737 /* Pokemon_Project.app */;
@@ -123,9 +134,9 @@
 			mainGroup = 2A4B0AF22D7B25E0009CD737;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				2A4B0B132D7B271A009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */,
+				2A4B0B3F2D7B75A0009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2A4B0AFC2D7B25E0009CD737 /* Products */;
@@ -359,14 +370,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2A4B0B132D7B271A009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.2;
-			};
-		};
 		2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -383,19 +386,17 @@
 				minimumVersion = 2.1.2;
 			};
 		};
+		2A4B0B3F2D7B75A0009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2A4B0B142D7B271A009CD737 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A4B0B132D7B271A009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		2A4B0B162D7B271A009CD737 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A4B0B132D7B271A009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
 		2A4B0B202D7B690F009CD737 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -405,6 +406,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */;
 			productName = Sniffer;
+		};
+		2A4B0B402D7B75A0009CD737 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A4B0B3F2D7B75A0009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
