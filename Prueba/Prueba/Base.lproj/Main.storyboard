@@ -226,10 +226,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27T-qE-NLM">
-                                        <rect key="frame" x="0.0" y="612" width="393" height="103"/>
+                                        <rect key="frame" x="0.0" y="647" width="393" height="68"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXs-SN-3LP">
-                                                <rect key="frame" x="164.66666666666666" y="34.666666666666629" width="64" height="34"/>
+                                                <rect key="frame" x="137.66666666666666" y="17" width="117.66666666666666" height="34"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="PLAY">
                                                     <color key="baseBackgroundColor" red="0.1764705882" green="0.20000000000000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -242,15 +242,16 @@
                                         <color key="backgroundColor" red="0.66274509800000003" green="0.70980392160000005" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="XXs-SN-3LP" firstAttribute="centerX" secondItem="27T-qE-NLM" secondAttribute="centerX" id="B52-uw-VsN"/>
-                                            <constraint firstAttribute="height" constant="103" id="Bbl-Pz-8Qn"/>
+                                            <constraint firstItem="XXs-SN-3LP" firstAttribute="height" secondItem="27T-qE-NLM" secondAttribute="height" multiplier="0.5" id="J1c-1H-M4m"/>
                                             <constraint firstItem="XXs-SN-3LP" firstAttribute="centerY" secondItem="27T-qE-NLM" secondAttribute="centerY" id="Rk1-d8-42v"/>
+                                            <constraint firstItem="XXs-SN-3LP" firstAttribute="width" secondItem="27T-qE-NLM" secondAttribute="width" multiplier="0.3" id="x0d-YG-1WC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEL-AG-ZFd">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBF-jm-EJb">
-                                                <rect key="frame" x="175.66666666666666" y="12" width="41.666666666666657" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBF-jm-EJb">
+                                                <rect key="frame" x="176" y="12.333333333333329" width="41.333333333333343" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -296,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhx-qk-jLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4491.304347826087" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="4490.8396946564881" y="2.1126760563380285"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="qYc-f8-AGB">
