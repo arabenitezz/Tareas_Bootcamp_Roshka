@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2A4B0B212D7B690F009CD737 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B202D7B690F009CD737 /* Kingfisher */; };
-		2A4B0B382D7B6D04009CD737 /* Sniffer in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B372D7B6D04009CD737 /* Sniffer */; };
 		2A4B0B412D7B75A0009CD737 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B402D7B75A0009CD737 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +55,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4B0B412D7B75A0009CD737 /* Alamofire in Frameworks */,
-				2A4B0B382D7B6D04009CD737 /* Sniffer in Frameworks */,
 				2A4B0B212D7B690F009CD737 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +100,6 @@
 			name = Pokemon_Project;
 			packageProductDependencies = (
 				2A4B0B202D7B690F009CD737 /* Kingfisher */,
-				2A4B0B372D7B6D04009CD737 /* Sniffer */,
 				2A4B0B402D7B75A0009CD737 /* Alamofire */,
 			);
 			productName = Pokemon_Project;
@@ -135,7 +132,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */,
 				2A4B0B3F2D7B75A0009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -378,14 +374,6 @@
 				minimumVersion = 8.3.0;
 			};
 		};
-		2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kofktu/Sniffer";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.2;
-			};
-		};
 		2A4B0B3F2D7B75A0009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -401,11 +389,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		2A4B0B372D7B6D04009CD737 /* Sniffer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */;
-			productName = Sniffer;
 		};
 		2A4B0B402D7B75A0009CD737 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
