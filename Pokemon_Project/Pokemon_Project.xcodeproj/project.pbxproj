@@ -10,6 +10,7 @@
 		2A4B0B152D7B271A009CD737 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B142D7B271A009CD737 /* Alamofire */; };
 		2A4B0B172D7B271A009CD737 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B162D7B271A009CD737 /* AlamofireDynamic */; };
 		2A4B0B212D7B690F009CD737 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B202D7B690F009CD737 /* Kingfisher */; };
+		2A4B0B382D7B6D04009CD737 /* Sniffer in Frameworks */ = {isa = PBXBuildFile; productRef = 2A4B0B372D7B6D04009CD737 /* Sniffer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4B0B382D7B6D04009CD737 /* Sniffer in Frameworks */,
 				2A4B0B212D7B690F009CD737 /* Kingfisher in Frameworks */,
 				2A4B0B152D7B271A009CD737 /* Alamofire in Frameworks */,
 				2A4B0B172D7B271A009CD737 /* AlamofireDynamic in Frameworks */,
@@ -90,6 +92,7 @@
 				2A4B0B142D7B271A009CD737 /* Alamofire */,
 				2A4B0B162D7B271A009CD737 /* AlamofireDynamic */,
 				2A4B0B202D7B690F009CD737 /* Kingfisher */,
+				2A4B0B372D7B6D04009CD737 /* Sniffer */,
 			);
 			productName = Pokemon_Project;
 			productReference = 2A4B0AFB2D7B25E0009CD737 /* Pokemon_Project.app */;
@@ -122,6 +125,7 @@
 			packageReferences = (
 				2A4B0B132D7B271A009CD737 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2A4B0AFC2D7B25E0009CD737 /* Products */;
@@ -371,6 +375,14 @@
 				minimumVersion = 8.3.0;
 			};
 		};
+		2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kofktu/Sniffer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -388,6 +400,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A4B0B1F2D7B690F009CD737 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		2A4B0B372D7B6D04009CD737 /* Sniffer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A4B0B362D7B6D04009CD737 /* XCRemoteSwiftPackageReference "Sniffer" */;
+			productName = Sniffer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
