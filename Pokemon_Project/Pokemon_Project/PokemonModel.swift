@@ -26,3 +26,15 @@ struct Pokemon: Codable {
         }
     }
 }
+
+struct PokemonTypeResponse: Codable {
+    let pokemon: [PokemonEntry]
+    
+    struct PokemonEntry: Codable {
+        let pokemon: PokemonReference
+        
+        struct PokemonReference: Codable {
+            let name: String
+        }
+    }
+}
