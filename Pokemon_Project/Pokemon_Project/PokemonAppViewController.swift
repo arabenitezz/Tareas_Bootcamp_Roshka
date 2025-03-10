@@ -2,7 +2,7 @@ import UIKit
 import Kingfisher
 
 class PokemonViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
@@ -55,8 +55,8 @@ class PokemonViewController: UIViewController {
         guard let category = categoryTextField.text, let searchText = searchTextField.text, !searchText.isEmpty else { return }
         
         let endpoint = category == "Nombre" ?
-            "https://pokeapi.co/api/v2/pokemon/\(searchText.lowercased())" :
-            "https://pokeapi.co/api/v2/pokemon/\(searchText)"
+        "https://pokeapi.co/api/v2/pokemon/\(searchText.lowercased())" :
+        "https://pokeapi.co/api/v2/pokemon/\(searchText)"
         
         HTTPClient.request(
             endpoint: endpoint,

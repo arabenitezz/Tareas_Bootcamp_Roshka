@@ -2,14 +2,14 @@ import UIKit
 import Kingfisher
 
 class PokemonTypeViewController: UIViewController {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pokemonTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     private let pickerView = UIPickerView()
-    private var pokemonList: [Pokemon] = [] // Lista de Pokémon del tipo seleccionado
-    private var pokemonNames: [String] = [] // Nombres de Pokémon para el PickerView
+    private var pokemonList: [Pokemon] = [] // Lista de Pokemon del tipo seleccionado
+    private var pokemonNames: [String] = [] // Nombres de Pokemon para el PickerView
     private var selectedPokemon: Pokemon? // Pokémon seleccionado en el PickerView
     
     override func viewDidLoad() {
@@ -51,10 +51,10 @@ class PokemonTypeViewController: UIViewController {
     
     private func updateTableView() {
         if let selectedPokemon = selectedPokemon {
-            // Mostrar solo el Pokémon seleccionado
+            // Mostrar solo el Pokemon seleccionado
             pokemonList = [selectedPokemon]
         } else {
-            // Mostrar todos los Pokémon del tipo
+            // Mostrar todos los Pokemon del tipo
         }
         tableView.reloadData()
     }
@@ -73,7 +73,7 @@ class PokemonTypeViewController: UIViewController {
                     self.pokemonTextField.text = self.pokemonNames.first // Valor por defecto
                     self.pickerView.reloadAllComponents()
                     
-                    // Obtener detalles de cada Pokémon
+                    // Obtener detalles de cada Pokemon
                     self.fetchPokemonDetails(for: self.pokemonNames)
                 }
             },
