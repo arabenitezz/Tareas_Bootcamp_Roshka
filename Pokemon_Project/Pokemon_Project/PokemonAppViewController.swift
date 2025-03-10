@@ -14,28 +14,39 @@ class PokemonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPickerView()
+        setupTextFields()
     }
     
     private func setupPickerView() {
         pickerView.delegate = self
         pickerView.dataSource = self
-        
-        // Crear un toolbar con un botón "Listo"
+    }
+    
+    private func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Listo", style: .done, target: self, action: #selector(dismissPicker))
+        let doneButton = UIBarButtonItem(title: "Listo", style: .done, target: self, action: #selector(dismissKeyboard))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbar.setItems([flexibleSpace, doneButton], animated: true)
         
-        // Asignar el toolbar como inputAccessoryView del TextField
+        return toolbar
+    }
+    
+    private func setupTextFields() {
+        let toolbar = createToolbar()
+        
+        // Asignar el toolbar a ambos textFields
         categoryTextField.inputAccessoryView = toolbar
+        searchTextField.inputAccessoryView = toolbar
+        
+        // Configurar el pickerView para el categoryTextField
         categoryTextField.inputView = pickerView
         categoryTextField.text = categories[0] // Valor por defecto
     }
     
-    @objc private func dismissPicker() {
-        view.endEditing(true) // Cierra el teclado o el picker
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
@@ -65,7 +76,6 @@ class PokemonViewController: UIViewController {
     }
 }
 
-// extension
 extension PokemonViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -82,6 +92,7 @@ extension PokemonViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         categoryTextField.text = categories[row]
         searchTextField.keyboardType = categories[row] == "Nombre" ? .alphabet : .numberPad
+        searchTextField.reloadInputViews()
     }
 }
 
