@@ -42,7 +42,9 @@ class PokemonViewController: UIViewController {
         
         // Configurar el pickerView para el categoryTextField
         categoryTextField.inputView = pickerView
-        categoryTextField.text = categories[0] // Valor por defecto
+        
+        // Establecer el placeholder inicial
+        categoryTextField.placeholder = "Buscar por nombre o nro de Pokémon"
     }
     
     @objc private func dismissKeyboard() {
@@ -90,7 +92,13 @@ extension PokemonViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // Actualizar el texto del categoryTextField con la opción seleccionada
         categoryTextField.text = categories[row]
+        
+        // Eliminar el placeholder cuando se selecciona una opción
+        categoryTextField.placeholder = nil
+        
+        // Cambiar el tipo de teclado del searchTextField según la opción seleccionada
         searchTextField.keyboardType = categories[row] == "Nombre" ? .alphabet : .numberPad
         searchTextField.reloadInputViews()
     }
