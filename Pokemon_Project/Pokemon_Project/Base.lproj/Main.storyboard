@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKE-px-lAE">
-    <device id="retina6_3" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="c0U-dp-K4t" customClass="HomeViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="opQ-JF-enr">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYw-gG-UTT" userLabel="LogoView">
-                                <rect key="frame" x="0.0" y="106.00000000000001" width="402" height="220.33333333333337"/>
+                                <rect key="frame" x="0.0" y="102.99999999999999" width="393" height="214.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="International_Pokémon_logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-1I-0vu">
-                                        <rect key="frame" x="81" y="65" width="240" height="89"/>
+                                        <rect key="frame" x="81" y="65" width="231" height="83.333333333333314"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -34,13 +34,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EZ-TW-Zdm" userLabel="ButtonsView">
-                                <rect key="frame" x="0.0" y="326.33333333333331" width="402" height="513.66666666666674"/>
+                                <rect key="frame" x="0.0" y="317.66666666666674" width="393" height="500.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-WP-eP3">
-                                        <rect key="frame" x="40.333333333333343" y="51.333333333333371" width="321.33333333333326" height="411"/>
+                                        <rect key="frame" x="39.333333333333343" y="50" width="314.33333333333326" height="400.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-JM-lcZ">
-                                                <rect key="frame" x="49.999999999999986" y="226.66666666666669" width="221.33333333333331" height="34.333333333333314"/>
+                                                <rect key="frame" x="49.999999999999986" y="215.66666666666669" width="214.33333333333331" height="34.666666666666657"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Busqueda por tipo">
                                                     <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,7 +50,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-MD-xhu">
-                                                <rect key="frame" x="83.333333333333357" y="122.3333333333333" width="154.66666666666663" height="34.333333333333329"/>
+                                                <rect key="frame" x="79.666666666666657" y="111.3333333333333" width="155" height="34.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Busqueda simple">
                                                     <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -106,23 +106,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PokemonViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-TG-deu">
-                                <rect key="frame" x="0.0" y="106" width="402" height="734"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdq-Ws-Wfr" userLabel="RequestsContainer">
-                                        <rect key="frame" x="0.0" y="367" width="402" height="367"/>
+                                        <rect key="frame" x="0.0" y="357.66666666666674" width="393" height="357.33333333333326"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVV-aV-4rF">
-                                                <rect key="frame" x="0.0" y="73.333333333333385" width="402" height="220.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="71.3333333333333" width="393" height="214.66666666666663"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIi-UR-QUK" userLabel="ButtonContainer">
-                                                        <rect key="frame" x="0.0" y="110.33333333333326" width="402" height="110"/>
+                                                        <rect key="frame" x="0.0" y="107.33333333333337" width="393" height="107.33333333333331"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWa-vQ-QQb">
-                                                                <rect key="frame" x="305" y="37.666666666666742" width="77" height="34.333333333333343"/>
+                                                                <rect key="frame" x="296" y="36.333333333333258" width="77" height="34.333333333333343"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Buscar">
                                                                     <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -132,7 +132,7 @@
                                                                 </connections>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-6m-thn">
-                                                                <rect key="frame" x="20" y="37.666666666666742" width="279" height="34.333333333333343"/>
+                                                                <rect key="frame" x="20" y="36.333333333333258" width="270" height="34.333333333333343"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
@@ -148,10 +148,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-Bz-I2s">
-                                                        <rect key="frame" x="0.0" y="0.0" width="402" height="110.33333333333333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="107.33333333333333"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre o Nro de pokemon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0r-nO-qDK">
-                                                                <rect key="frame" x="100.00000000000001" y="38" width="202.33333333333337" height="34"/>
+                                                                <rect key="frame" x="95.666666666666686" y="36.666666666666629" width="202" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
@@ -179,7 +179,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyL-Wx-xeE">
-                                                <rect key="frame" x="119" y="56.999999999999993" width="164" height="20.666666666666664"/>
+                                                <rect key="frame" x="114.66666666666669" y="56.999999999999936" width="164" height="18.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -197,13 +197,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-Gj-HYz" userLabel="PokemonImageContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="402" height="367"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="357.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-JL-2LY">
-                                                <rect key="frame" x="0.0" y="0.0" width="402" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="107.33333333333333"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="International_Pokémon_logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-QN-R0T" userLabel="logo">
-                                                        <rect key="frame" x="60.333333333333343" y="16.666666666666671" width="281.33333333333326" height="77.000000000000014"/>
+                                                        <rect key="frame" x="59" y="16" width="275" height="75"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -215,10 +215,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwL-3Z-1Hc">
-                                                <rect key="frame" x="0.0" y="110" width="402" height="257"/>
+                                                <rect key="frame" x="0.0" y="107.33333333333333" width="393" height="250.33333333333337"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f5548916ca86b30f7b8f418e4c5c6794" translatesAutoresizingMaskIntoConstraints="NO" id="y6E-ZH-bcz" userLabel="PokemonImageView">
-                                                        <rect key="frame" x="98.333333333333329" y="25.666666666666671" width="205.33333333333337" height="205.66666666666663"/>
+                                                        <rect key="frame" x="96.333333333333329" y="25" width="200.33333333333337" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="y6E-ZH-bcz" secondAttribute="height" multiplier="1:1" id="Hxb-CM-npK"/>
                                                         </constraints>
@@ -289,31 +289,43 @@
             <objects>
                 <viewController id="ThV-pr-KmO" customClass="PokemonTypeViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ziu-zb-VZl">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-ge-sdk">
-                                <rect key="frame" x="0.0" y="78" width="402" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSE-9F-mDC">
+                                <rect key="frame" x="16" y="193" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-5O-Let">
+                                <rect key="frame" x="16" y="235" width="361" height="583"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-ge-sdk">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="ThV-pr-KmO" id="QCw-Zp-lsH"/>
                                 </connections>
                             </searchBar>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSE-9F-mDC">
-                                <rect key="frame" x="16" y="140" width="370" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-5O-Let">
-                                <rect key="frame" x="16" y="182" width="370" height="658"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="47N-rD-fjX"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="rAl-5O-Let" firstAttribute="centerX" secondItem="47N-rD-fjX" secondAttribute="centerX" id="06H-6c-n1D"/>
+                            <constraint firstItem="wSE-9F-mDC" firstAttribute="centerX" secondItem="47N-rD-fjX" secondAttribute="centerX" id="7Yl-xU-Gie"/>
+                            <constraint firstItem="TE0-ge-sdk" firstAttribute="trailing" secondItem="47N-rD-fjX" secondAttribute="trailing" id="DWu-oa-sq2"/>
+                            <constraint firstItem="rAl-5O-Let" firstAttribute="top" secondItem="wSE-9F-mDC" secondAttribute="bottom" constant="8" symbolic="YES" id="J89-m9-GZr"/>
+                            <constraint firstItem="wSE-9F-mDC" firstAttribute="top" secondItem="TE0-ge-sdk" secondAttribute="bottom" constant="34" id="Kmh-vD-Wxv"/>
+                            <constraint firstItem="TE0-ge-sdk" firstAttribute="leading" secondItem="47N-rD-fjX" secondAttribute="leading" id="Krj-jK-mOh"/>
+                            <constraint firstItem="TE0-ge-sdk" firstAttribute="centerX" secondItem="47N-rD-fjX" secondAttribute="centerX" id="UDA-fv-q4d"/>
+                            <constraint firstItem="47N-rD-fjX" firstAttribute="trailing" secondItem="rAl-5O-Let" secondAttribute="trailing" constant="16" id="gRX-P8-dEI"/>
+                            <constraint firstItem="rAl-5O-Let" firstAttribute="bottom" secondItem="47N-rD-fjX" secondAttribute="bottom" id="h46-DO-ftu"/>
+                            <constraint firstItem="rAl-5O-Let" firstAttribute="leading" secondItem="47N-rD-fjX" secondAttribute="leading" constant="16" id="hr4-Sx-6dX"/>
+                            <constraint firstItem="wSE-9F-mDC" firstAttribute="leading" secondItem="47N-rD-fjX" secondAttribute="leading" constant="16" id="i1o-Y1-7tg"/>
+                            <constraint firstItem="47N-rD-fjX" firstAttribute="trailing" secondItem="wSE-9F-mDC" secondAttribute="trailing" constant="16" id="xmL-WB-5v5"/>
+                            <constraint firstItem="TE0-ge-sdk" firstAttribute="top" secondItem="47N-rD-fjX" secondAttribute="top" id="y1T-3A-rcl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2AH-3R-1kF"/>
                     <connections>
@@ -332,7 +344,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKE-px-lAE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yjS-rX-MQc">
-                        <rect key="frame" x="0.0" y="62" width="402" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
