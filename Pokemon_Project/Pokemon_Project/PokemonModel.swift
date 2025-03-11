@@ -33,3 +33,12 @@ struct Pokemon: Codable {
         }
     }
 }
+
+struct PokemonListResponse: Codable {
+    let results: [PokemonEntry]
+    
+    struct PokemonEntry: Codable {
+        let name: String
+        let url: String
+    }
+}

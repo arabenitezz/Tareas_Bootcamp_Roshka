@@ -390,9 +390,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="CET-Ep-8Xb"/>
                     <connections>
-                        <outlet property="idLabel" destination="3Pg-iH-75A" id="Jvk-e0-Faf"/>
                         <outlet property="nameLabel" destination="0qA-KC-lIG" id="2O8-it-9Nb"/>
                         <outlet property="pokemonImageView" destination="iBc-Lb-zUh" id="UHX-44-r8e"/>
+                        <outlet property="typeLabel" destination="3Pg-iH-75A" id="hNB-oj-b6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFc-tz-wOI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -106,7 +106,17 @@ class PokemonTypeViewController: UIViewController {
         if searchText.isEmpty {
             visiblePokemonList = allPokemonList
         } else {
-            visiblePokemonList = allPokemonList.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+            visiblePokemonList = allPokemonList.filter { pokemon in
+                // Filtrar por nombre
+                let nameMatch = pokemon.name.lowercased().contains(searchText.lowercased())
+                
+                // Filtrar por tipo exacto
+                let typeMatch = pokemon.types.contains { type in
+                    type.type.name.lowercased() == searchText.lowercased()
+                }
+                
+                return nameMatch || typeMatch
+            }
         }
         tableView.reloadData()
     }
@@ -137,6 +147,7 @@ extension PokemonTypeViewController: UITableViewDelegate, UITableViewDataSource 
         let pokemon = visiblePokemonList[indexPath.row]
         
         cell.textLabel?.text = pokemon.name.capitalized
+        cell.detailTextLabel?.text = pokemon.types.map { $0.type.name.capitalized }.joined(separator: ", ")
         cell.imageView?.image = UIImage(systemName: "questionmark.circle")
         
         if let imageUrl = URL(string: pokemon.sprites.other.officialArtwork.frontDefault) {
