@@ -6,14 +6,15 @@ class PokemonTypeViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    private var allPokemonList: [Pokemon] = [] // Lista completa de Pokémon
-    private var visiblePokemonList: [Pokemon] = [] // Lista filtrada para mostrar en la tabla
-    private var isSearching: Bool = false // Para controlar si se está realizando una búsqueda
+    private var allPokemonList: [Pokemon] = []
+    private var visiblePokemonList: [Pokemon] = []
+    private var isSearching: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupSearchBar()
+        fetchAllPokemon()
     }
     
     private func setupTableView() {
@@ -60,6 +61,7 @@ class PokemonTypeViewController: UIViewController {
                 dispatchGroup.notify(queue: .main) {
                     // Ordenar alfabéticamente
                     self.allPokemonList.sort { $0.name < $1.name }
+                    self.visiblePokemonList = self.allPokemonList
                     
                     // Actualizar UI
                     self.tableView.reloadData()
@@ -178,10 +180,11 @@ extension PokemonTypeViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+        guard let searchText = searchBar.text else { return }
         
         if allPokemonList.isEmpty {
             fetchAllPokemon()
+            // La función fetchAllPokemon ya actualiza la UI cuando termine
         } else {
             filterPokemon(by: searchText)
         }
