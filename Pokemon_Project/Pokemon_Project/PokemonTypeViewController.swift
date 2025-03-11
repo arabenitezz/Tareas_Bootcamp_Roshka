@@ -233,13 +233,10 @@ extension PokemonTypeViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Puedes agregar acción al seleccionar un Pokémon aquí
         guard indexPath.row < visiblePokemonList.count else { return }
         let selectedPokemon = visiblePokemonList[indexPath.row]
         print("Selected Pokémon: \(selectedPokemon.name)")
-        
-        // Por ejemplo, navegar a una vista de detalle
-        // performSegue(withIdentifier: "showPokemonDetail", sender: selectedPokemon)
+
     }
 }
 
@@ -253,7 +250,6 @@ extension PokemonTypeViewController: UISearchBarDelegate {
             visiblePokemonList = allPokemonList.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
         
-        // Estamos filtrando por nombre, no buscando tipo
         isSearchingType = false
         
         tableView.reloadData()
@@ -262,7 +258,6 @@ extension PokemonTypeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text, !searchText.isEmpty else { return }
         
-        // Estamos buscando un tipo de Pokémon
         isSearchingType = true
         
         // Buscar Pokémon por tipo
