@@ -58,6 +58,9 @@ class PokemonViewController: UIViewController {
         "https://pokeapi.co/api/v2/pokemon/\(searchText.lowercased())" :
         "https://pokeapi.co/api/v2/pokemon/\(searchText)"
         
+        // let parameters: APIParameters = ["offSet":0,
+                        //  "limit":151]
+        
         HTTPClient.request(
             endpoint: endpoint,
             method: .get,

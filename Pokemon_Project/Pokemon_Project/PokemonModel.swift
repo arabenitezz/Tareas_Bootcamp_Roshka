@@ -1,9 +1,8 @@
-import Foundation
-
 struct Pokemon: Codable {
     let name: String
     let id: Int
     let sprites: Sprites
+    let types: [PokemonType]
     
     struct Sprites: Codable {
         let other: Other
@@ -14,7 +13,6 @@ struct Pokemon: Codable {
             struct OfficialArtwork: Codable {
                 let frontDefault: String
                 
-                // Mapeamos las claves del JSON a nombres más Swift-friendly
                 enum CodingKeys: String, CodingKey {
                     case frontDefault = "front_default"
                 }
@@ -25,15 +23,12 @@ struct Pokemon: Codable {
             }
         }
     }
-}
-
-struct PokemonTypeResponse: Codable {
-    let pokemon: [PokemonEntry]
     
-    struct PokemonEntry: Codable {
-        let pokemon: PokemonReference
+    struct PokemonType: Codable {
+        let slot: Int
+        let type: TypeDetails
         
-        struct PokemonReference: Codable {
+        struct TypeDetails: Codable {
             let name: String
         }
     }
