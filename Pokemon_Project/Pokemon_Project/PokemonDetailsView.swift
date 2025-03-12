@@ -17,7 +17,7 @@ class PokemonDetailViewController: UIViewController {
     
     private func setupUI() {
         nameLabel.text = pokemon.name.capitalized
-    
+        
         let types = pokemon.types.map { $0.type.name.capitalized }.joined(separator: ", ")
         typeLabel.text = "Tipo: \(types)"
         

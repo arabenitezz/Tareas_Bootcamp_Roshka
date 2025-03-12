@@ -33,7 +33,7 @@ struct Pokemon: Codable {
         struct TypeDetails: Codable {
             let name: String
         }
-    }
+    } 
 }
 
 struct PokemonListResponse: Codable {
@@ -44,3 +44,5 @@ struct PokemonListResponse: Codable {
         let url: String
     }
 }
+
+

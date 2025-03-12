@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "goToSimpleSearch" {
             
         } else if segue.identifier == "goToTypeSearch" {
-        
+            
         }
     }
 }
