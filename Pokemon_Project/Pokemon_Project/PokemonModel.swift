@@ -3,6 +3,8 @@ struct Pokemon: Codable {
     let id: Int
     let sprites: Sprites
     let types: [PokemonType]
+    let weight: Int
+    let height: Int
     
     struct Sprites: Codable {
         let other: Other
