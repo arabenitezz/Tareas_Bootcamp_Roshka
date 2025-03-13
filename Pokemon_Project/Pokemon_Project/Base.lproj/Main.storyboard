@@ -39,11 +39,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-WP-eP3">
                                         <rect key="frame" x="39.333333333333343" y="50" width="314.33333333333326" height="400.33333333333331"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jtr-TC-B5H">
-                                                <rect key="frame" x="31" y="80" width="251.66666666666669" height="200"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jtr-TC-B5H">
+                                                <rect key="frame" x="31" y="128" width="251.66666666666669" height="143"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-JM-lcZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="251.66666666666666" height="91.333333333333329"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-JM-lcZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="251.66666666666666" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Busqueda por tipo">
                                                             <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -52,8 +52,8 @@
                                                             <segue destination="ThV-pr-KmO" kind="show" id="sYp-LS-ExG"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ico-Q0-Z4C">
-                                                        <rect key="frame" x="0.0" y="111.3333333333333" width="251.66666666666666" height="34.333333333333329"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ico-Q0-Z4C">
+                                                        <rect key="frame" x="0.0" y="54.333333333333314" width="251.66666666666666" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Secciones">
                                                             <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,8 +62,8 @@
                                                             <segue destination="QHP-WB-wUb" kind="show" id="LyO-mZ-vb1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-MD-xhu">
-                                                        <rect key="frame" x="0.0" y="165.66666666666669" width="251.66666666666666" height="34.333333333333343"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-MD-xhu">
+                                                        <rect key="frame" x="0.0" y="108.66666666666669" width="251.66666666666666" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Busqueda simple">
                                                             <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -79,7 +79,7 @@
                                         <constraints>
                                             <constraint firstItem="Jtr-TC-B5H" firstAttribute="centerX" secondItem="x4E-WP-eP3" secondAttribute="centerX" id="8Js-vn-kUo"/>
                                             <constraint firstItem="Jtr-TC-B5H" firstAttribute="width" secondItem="x4E-WP-eP3" secondAttribute="width" multiplier="0.8" id="aLx-0w-ege"/>
-                                            <constraint firstItem="Jtr-TC-B5H" firstAttribute="height" secondItem="x4E-WP-eP3" secondAttribute="height" multiplier="0.5" id="xFA-R7-Hac"/>
+                                            <constraint firstItem="Jtr-TC-B5H" firstAttribute="centerY" secondItem="x4E-WP-eP3" secondAttribute="centerY" id="yLq-Tl-2oO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
