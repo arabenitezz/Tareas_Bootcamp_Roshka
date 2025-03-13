@@ -45,4 +45,23 @@ struct PokemonListResponse: Codable {
     }
 }
 
+struct PokemonTypeSection {
+    var typeName: String
+    var pokemons: [Pokemon]
+}
+
+struct PokemonTypeResponse: Codable {
+    let pokemon: [PokemonTypeEntry]
+    
+    struct PokemonTypeEntry: Codable {
+        let pokemon: PokemonInfo
+        let slot: Int
+        
+        struct PokemonInfo: Codable {
+            let name: String
+            let url: String
+        }
+    }
+}
+
 

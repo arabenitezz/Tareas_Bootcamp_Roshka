@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKE-px-lAE">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="c0U-dp-K4t" customClass="HomeViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="opQ-JF-enr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYw-gG-UTT" userLabel="LogoView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="151"/>
+                                <rect key="frame" x="0.0" y="102.99999999999999" width="393" height="214.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="International_Pokémon_logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-1I-0vu">
-                                        <rect key="frame" x="81" y="65" width="158" height="20"/>
+                                        <rect key="frame" x="81" y="65" width="231" height="83.333333333333314"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -34,40 +34,52 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EZ-TW-Zdm" userLabel="ButtonsView">
-                                <rect key="frame" x="0.0" y="215" width="320" height="353"/>
+                                <rect key="frame" x="0.0" y="317.66666666666674" width="393" height="500.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-WP-eP3">
-                                        <rect key="frame" x="32" y="35.5" width="256" height="282"/>
+                                        <rect key="frame" x="39.333333333333343" y="50" width="314.33333333333326" height="400.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-JM-lcZ">
-                                                <rect key="frame" x="50" y="97" width="156" height="35"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Busqueda por tipo">
-                                                    <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="ThV-pr-KmO" kind="show" id="sYp-LS-ExG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-MD-xhu">
-                                                <rect key="frame" x="50.5" y="-7" width="155" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Busqueda simple">
-                                                    <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="xs3-7D-oxM"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jtr-TC-B5H">
+                                                <rect key="frame" x="31" y="80" width="251.66666666666669" height="200"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-JM-lcZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="251.66666666666666" height="91.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Busqueda por tipo">
+                                                            <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="ThV-pr-KmO" kind="show" id="sYp-LS-ExG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ico-Q0-Z4C">
+                                                        <rect key="frame" x="0.0" y="111.3333333333333" width="251.66666666666666" height="34.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Secciones">
+                                                            <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="QHP-WB-wUb" kind="show" id="LyO-mZ-vb1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-MD-xhu">
+                                                        <rect key="frame" x="0.0" y="165.66666666666669" width="251.66666666666666" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Busqueda simple">
+                                                            <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="show" id="xs3-7D-oxM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
-                                            <constraint firstItem="wF2-JM-lcZ" firstAttribute="leading" secondItem="x4E-WP-eP3" secondAttribute="leading" constant="50" id="ITA-sM-krf"/>
-                                            <constraint firstAttribute="trailing" secondItem="wF2-JM-lcZ" secondAttribute="trailing" constant="50" id="Ilb-gw-fuT"/>
-                                            <constraint firstAttribute="bottom" secondItem="wF2-JM-lcZ" secondAttribute="bottom" constant="150" id="fhz-x7-MgC"/>
-                                            <constraint firstItem="wF2-JM-lcZ" firstAttribute="top" secondItem="PjO-MD-xhu" secondAttribute="bottom" constant="70" id="kZF-Vk-Y0j"/>
-                                            <constraint firstItem="wF2-JM-lcZ" firstAttribute="centerX" secondItem="x4E-WP-eP3" secondAttribute="centerX" id="oSg-cJ-sdC"/>
-                                            <constraint firstItem="PjO-MD-xhu" firstAttribute="centerX" secondItem="x4E-WP-eP3" secondAttribute="centerX" id="ycX-FO-9CD"/>
+                                            <constraint firstItem="Jtr-TC-B5H" firstAttribute="centerX" secondItem="x4E-WP-eP3" secondAttribute="centerX" id="8Js-vn-kUo"/>
+                                            <constraint firstItem="Jtr-TC-B5H" firstAttribute="width" secondItem="x4E-WP-eP3" secondAttribute="width" multiplier="0.8" id="aLx-0w-ege"/>
+                                            <constraint firstItem="Jtr-TC-B5H" firstAttribute="height" secondItem="x4E-WP-eP3" secondAttribute="height" multiplier="0.5" id="xFA-R7-Hac"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -106,23 +118,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PokemonViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-TG-deu">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdq-Ws-Wfr" userLabel="RequestsContainer">
-                                        <rect key="frame" x="0.0" y="252" width="320" height="252"/>
+                                        <rect key="frame" x="0.0" y="357.66666666666674" width="393" height="357.33333333333326"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVV-aV-4rF">
-                                                <rect key="frame" x="0.0" y="73" width="320" height="151.5"/>
+                                                <rect key="frame" x="0.0" y="71.3333333333333" width="393" height="214.66666666666663"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIi-UR-QUK" userLabel="ButtonContainer">
-                                                        <rect key="frame" x="0.0" y="76" width="320" height="75.5"/>
+                                                        <rect key="frame" x="0.0" y="107.33333333333337" width="393" height="107.33333333333331"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWa-vQ-QQb">
-                                                                <rect key="frame" x="223" y="20.5" width="77" height="34"/>
+                                                                <rect key="frame" x="296" y="36.666666666666629" width="77" height="34"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Buscar">
                                                                     <color key="baseBackgroundColor" red="0.2588235438" green="0.35294118520000001" blue="0.63529413940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -132,7 +144,7 @@
                                                                 </connections>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-6m-thn">
-                                                                <rect key="frame" x="20" y="20.5" width="197" height="34"/>
+                                                                <rect key="frame" x="20" y="36.666666666666629" width="270" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
@@ -148,10 +160,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-Bz-I2s">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="107.33333333333333"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre o Nro de pokemon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0r-nO-qDK">
-                                                                <rect key="frame" x="59" y="21" width="202" height="34"/>
+                                                                <rect key="frame" x="95.666666666666686" y="36.666666666666629" width="202" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
@@ -179,7 +191,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyL-Wx-xeE">
-                                                <rect key="frame" x="78" y="57" width="164" height="20.5"/>
+                                                <rect key="frame" x="114.66666666666669" y="56.999999999999936" width="164" height="18.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -197,13 +209,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-Gj-HYz" userLabel="PokemonImageContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="357.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-JL-2LY">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="107.33333333333333"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="International_Pokémon_logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-QN-R0T" userLabel="logo">
-                                                        <rect key="frame" x="48" y="11.5" width="224" height="53"/>
+                                                        <rect key="frame" x="59" y="16" width="275" height="75"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -215,10 +227,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwL-3Z-1Hc">
-                                                <rect key="frame" x="0.0" y="75.5" width="320" height="176.5"/>
+                                                <rect key="frame" x="0.0" y="107.33333333333333" width="393" height="250.33333333333337"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f5548916ca86b30f7b8f418e4c5c6794" translatesAutoresizingMaskIntoConstraints="NO" id="y6E-ZH-bcz" userLabel="PokemonImageView">
-                                                        <rect key="frame" x="89.5" y="17.5" width="141" height="141.5"/>
+                                                        <rect key="frame" x="96.333333333333329" y="25" width="200.33333333333337" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="y6E-ZH-bcz" secondAttribute="height" multiplier="1:1" id="Hxb-CM-npK"/>
                                                         </constraints>
@@ -289,20 +301,20 @@
             <objects>
                 <viewController id="ThV-pr-KmO" customClass="PokemonTypeViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ziu-zb-VZl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSE-9F-mDC">
-                                <rect key="frame" x="16" y="154" width="288" height="34"/>
+                                <rect key="frame" x="16" y="193" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-5O-Let">
-                                <rect key="frame" x="16" y="196" width="288" height="372"/>
+                                <rect key="frame" x="16" y="235" width="361" height="583"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-ge-sdk">
-                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="ThV-pr-KmO" id="QCw-Zp-lsH"/>
@@ -342,14 +354,14 @@
             <objects>
                 <viewController storyboardIdentifier="PokemonDetailViewController" id="WPu-Ls-ekE" customClass="PokemonDetailViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hla-Vo-zf7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quc-IO-WBK">
-                                <rect key="frame" x="0.0" y="20" width="320" height="274"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="379.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-Lb-zUh">
-                                        <rect key="frame" x="62.5" y="39.5" width="195" height="195"/>
+                                        <rect key="frame" x="76.666666666666686" y="69.666666666666657" width="240" height="239.99999999999997"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iBc-Lb-zUh" secondAttribute="height" multiplier="1:1" id="mb1-Re-gBT"/>
                                         </constraints>
@@ -363,31 +375,31 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2g-9i-JmZ">
-                                <rect key="frame" x="0.0" y="294" width="320" height="274"/>
+                                <rect key="frame" x="0.0" y="438.66666666666674" width="393" height="379.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="UQS-j8-uMZ">
-                                        <rect key="frame" x="139.5" y="58.5" width="41.5" height="157"/>
+                                        <rect key="frame" x="176" y="111.33333333333333" width="41.333333333333343" height="156.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-KC-lIG">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOj-UK-aVk">
-                                                <rect key="frame" x="0.0" y="45.5" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="45.333333333333371" width="41.333333333333336" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmo-VQ-aAz">
-                                                <rect key="frame" x="0.0" y="91" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="90.666666666666629" width="41.333333333333336" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-iH-75A">
-                                                <rect key="frame" x="0.0" y="136.5" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="136" width="41.333333333333336" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -430,13 +442,46 @@
             </objects>
             <point key="canvasLocation" x="2713.740458015267" y="-7.042253521126761"/>
         </scene>
+        <!--Pokemon Type Section View Controller-->
+        <scene sceneID="r3P-37-G7Y">
+            <objects>
+                <viewController id="QHP-WB-wUb" customClass="PokemonTypeSectionViewController" customModule="Pokemon_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pwr-YF-Vh1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y3v-mW-Jo8">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5ie-bD-qOF"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="y3v-mW-Jo8" firstAttribute="top" secondItem="5ie-bD-qOF" secondAttribute="top" id="68i-RY-FfK"/>
+                            <constraint firstItem="y3v-mW-Jo8" firstAttribute="leading" secondItem="5ie-bD-qOF" secondAttribute="leading" id="VXD-90-Jrk"/>
+                            <constraint firstItem="5ie-bD-qOF" firstAttribute="bottom" secondItem="y3v-mW-Jo8" secondAttribute="bottom" id="Wmi-uu-P2o"/>
+                            <constraint firstItem="y3v-mW-Jo8" firstAttribute="centerX" secondItem="5ie-bD-qOF" secondAttribute="centerX" id="adb-Nu-lsh"/>
+                            <constraint firstItem="5ie-bD-qOF" firstAttribute="trailing" secondItem="y3v-mW-Jo8" secondAttribute="trailing" id="b4I-6G-f6b"/>
+                            <constraint firstItem="y3v-mW-Jo8" firstAttribute="centerY" secondItem="5ie-bD-qOF" secondAttribute="centerY" id="iXW-pB-sI2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NNP-Sw-x5s"/>
+                    <connections>
+                        <outlet property="tableView" destination="y3v-mW-Jo8" id="Xba-rq-Ckf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbm-XY-ZXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608" y="-7"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pQQ-HM-hcx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKE-px-lAE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yjS-rX-MQc">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
