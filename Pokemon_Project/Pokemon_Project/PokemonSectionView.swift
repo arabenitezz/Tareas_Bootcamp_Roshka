@@ -6,12 +6,14 @@ class PokemonTypeSectionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var pokemonSections: [PokemonTypeSection] = []
+    var expandedSections: Set<Int> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         fetchPokemonByType()
+        
     }
     
     private func setupTableView() {
@@ -82,6 +84,21 @@ class PokemonTypeSectionViewController: UIViewController {
             }
         )
     }
+    
+    // Método para manejar el toque en el encabezado
+    @objc func headerTapped(_ sender: UITapGestureRecognizer) {
+        guard let headerView = sender.view else { return }
+        let section = headerView.tag
+        
+        // Alternamos el estado de la sección
+        if expandedSections.contains(section) {
+            expandedSections.remove(section)
+        } else {
+            expandedSections.insert(section)
+        }
+        
+        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+    }
 }
 
 extension PokemonTypeSectionViewController: UITableViewDataSource, UITableViewDelegate {
@@ -91,7 +108,10 @@ extension PokemonTypeSectionViewController: UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pokemonSections[section].pokemons.count
+        guard section < pokemonSections.count else { return 0 }
+        
+        // Si la sección está expandida, muestra las filas, sino, no muestra ninguna
+        return expandedSections.contains(section) ? pokemonSections[section].pokemons.count : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,17 +128,36 @@ extension PokemonTypeSectionViewController: UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
-        view.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0)
+        guard section < pokemonSections.count else { return nil }
         
-        let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 40))
-        lbl.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        lbl.textColor = .black
-        lbl.text = pokemonSections[section].typeName.capitalized
-        view.addSubview(lbl)
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        headerView.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 0.0, alpha: 1.0) // #FFCC00
         
-        return view
+        // Etiqueta para el nombre del tipo
+        let typeLabel = UILabel(frame: CGRect(x: 15, y: 0, width: headerView.frame.width - 50, height: 40))
+        typeLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        typeLabel.textColor = .white
+        typeLabel.text = pokemonSections[section].typeName.capitalized
+        
+        // Indicador de sección expandida/colapsada
+        let indicatorLabel = UILabel(frame: CGRect(x: headerView.frame.width - 40, y: 0, width: 40, height: 40))
+        indicatorLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        indicatorLabel.textColor = .white
+        indicatorLabel.text = expandedSections.contains(section) ? "▼" : "▶"
+        indicatorLabel.textAlignment = .center
+        
+        headerView.addSubview(typeLabel)
+        headerView.addSubview(indicatorLabel)
+        
+        // Añadir gesto de toque para expandir/colapsar
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(headerTapped(_:)))
+        headerView.addGestureRecognizer(tapGesture)
+        headerView.tag = section // Usamos el tag para identificar qué sección fue tocada
+        headerView.isUserInteractionEnabled = true
+        
+        return headerView
     }
+    
     // establece la altura del header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
